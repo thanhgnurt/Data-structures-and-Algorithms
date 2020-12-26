@@ -1,0 +1,7 @@
+D:\DHTX-VB2\CTDL&GT\Algorithm Pratice\Algorithm Pratice\bin\Debug\Algorithm Pratice.exe.config
+D:\DHTX-VB2\CTDL&GT\Algorithm Pratice\Algorithm Pratice\bin\Debug\Algorithm Pratice.exe
+D:\DHTX-VB2\CTDL&GT\Algorithm Pratice\Algorithm Pratice\bin\Debug\Algorithm Pratice.pdb
+D:\DHTX-VB2\CTDL&GT\Algorithm Pratice\Algorithm Pratice\obj\Debug\Algorithm Pratice.csprojAssemblyReference.cache
+D:\DHTX-VB2\CTDL&GT\Algorithm Pratice\Algorithm Pratice\obj\Debug\Algorithm Pratice.csproj.CoreCompileInputs.cache
+D:\DHTX-VB2\CTDL&GT\Algorithm Pratice\Algorithm Pratice\obj\Debug\Algorithm Pratice.exe
+D:\DHTX-VB2\CTDL&GT\Algorithm Pratice\Algorithm Pratice\obj\Debug\Algorithm Pratice.pdb
