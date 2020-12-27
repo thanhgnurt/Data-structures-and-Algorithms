@@ -42,12 +42,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Array\Array Manipulation.cs" />
     <Compile Include="Array\DS.cs" />
     <Compile Include="Array\Dynamic_Array.cs" />
     <Compile Include="Array\Left Rotation.cs" />
     <Compile Include="Dictionaries and Hashmaps\Hash Tables_ Ransom Note.cs" />
     <Compile Include="Dictionaries and Hashmaps\Hash Table_Random Note _ Solution 2.cs" />
     <Compile Include="Dictionaries and Hashmaps\Two Strings.cs" />
+    <Compile Include="Array\Minimum Swaps 2.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Search\Ice_Cream.cs" />
