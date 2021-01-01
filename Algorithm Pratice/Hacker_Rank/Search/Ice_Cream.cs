@@ -48,7 +48,7 @@ class Ice_Cream
 
 
 
-
+/*
     static void Main(string[] args)
     {
         int t = Convert.ToInt32(Console.ReadLine());
@@ -70,4 +70,5 @@ class Ice_Cream
             whatFlavors(cost, money);
         }
     }
+    */
 }

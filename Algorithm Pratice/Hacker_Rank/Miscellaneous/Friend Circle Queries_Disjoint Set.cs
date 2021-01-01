@@ -4,13 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Hacker_Rank
+namespace Hacker_Rank.Miscellaneous
 {
-    class Program
+    class Friend_Circle_Queries_Disjoint_Set
     {
-        static void Main(string[] args)
-        {
-
-        }
     }
 }

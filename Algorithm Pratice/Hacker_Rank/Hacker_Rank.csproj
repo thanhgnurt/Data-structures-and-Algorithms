@@ -50,6 +50,10 @@
     <Compile Include="Dictionaries and Hashmaps\Hash Table_Random Note _ Solution 2.cs" />
     <Compile Include="Dictionaries and Hashmaps\Two Strings.cs" />
     <Compile Include="Array\Minimum Swaps 2.cs" />
+    <Compile Include="Linked List\Print the Elements of a Linked List.cs" />
+    <Compile Include="Miscellaneous\Flipping bits.cs" />
+    <Compile Include="Miscellaneous\Friend Circle Queries.cs" />
+    <Compile Include="Miscellaneous\Time Complexity_Primality.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Search\Ice_Cream.cs" />

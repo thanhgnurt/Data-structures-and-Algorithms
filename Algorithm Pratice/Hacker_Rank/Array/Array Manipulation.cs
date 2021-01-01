@@ -23,28 +23,36 @@ class Array_Manipulation
         {
             result[i] = 0;
         }
-        long max = result[0];
         for (int i = 0; i < queries.GetLength(0); i++)
         {
-            for (int j = queries[i][0] - 1; j <= queries[i][1] - 1; j++)
-            {
-                result[j] += queries[i][2];
-            }
-        }
 
+            result[queries[i][0] - 1] += queries[i][2];
+            if (queries[i][1] < n)
+            {
+                result[queries[i][1]] += -queries[i][2];
+            }
+
+        }
+        long temp = 0;
         for (int i = 0; i < n; i++)
         {
-            if (result[i] > max)
+            temp += result[i];
+            result[i] = temp;
+
+        }
+        long max = result[0];
+        for (int i = 0; i < n; i++)
+        {
+            if (max < result[i])
             {
                 max = result[i];
             }
-
         }
         return max;
 
 
     }
-
+/*
     static void Main(string[] args)
     {
         TextWriter textWriter = new StreamWriter(@System.Environment.GetEnvironmentVariable("OUTPUT_PATH"), true);
@@ -69,4 +77,5 @@ class Array_Manipulation
         textWriter.Flush();
         textWriter.Close();
     }
+*/
 }

@@ -12,38 +12,43 @@ using System.Text.RegularExpressions;
 using System.Text;
 using System;
 
-class Solution
+class Time_Complexity_Primality
 {
 
-    // Complete the reverseArray function below.
-    static int[] reverseArray(int[] a)
+    // Complete the primality function below.
+    static string primality(int n)
     {
-        int left = 0;
-        int right = a.Length - 1;
-        while (left < right)
+        if (n == 1)
         {
-            int temp = a[left];
-            a[left] = a[right];
-            a[right] = temp;
-            left++;
-            right--;
+            return "Not prime";
         }
-        return a;
-
+        for (int i = 2; i <= Math.Sqrt(n); i++)
+        {
+            if (n % i == 0)
+            {
+                return "Not prime";
+            }
+        }
+        return "Prime";
 
     }
+
+
 /*
     static void Main(string[] args)
     {
         TextWriter textWriter = new StreamWriter(@System.Environment.GetEnvironmentVariable("OUTPUT_PATH"), true);
 
-        int arrCount = Convert.ToInt32(Console.ReadLine());
+        int p = Convert.ToInt32(Console.ReadLine());
 
-        int[] arr = Array.ConvertAll(Console.ReadLine().Split(' '), arrTemp => Convert.ToInt32(arrTemp))
-        ;
-        int[] res = reverseArray(arr);
+        for (int pItr = 0; pItr < p; pItr++)
+        {
+            int n = Convert.ToInt32(Console.ReadLine());
 
-        textWriter.WriteLine(string.Join(" ", res));
+            string result = primality(n);
+
+            textWriter.WriteLine(result);
+        }
 
         textWriter.Flush();
         textWriter.Close();

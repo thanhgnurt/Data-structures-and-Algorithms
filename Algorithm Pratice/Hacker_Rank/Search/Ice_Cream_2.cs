@@ -170,7 +170,7 @@ class Ice_Cream_2
         return -1;
     }
 
-
+/*
     static void Main(string[] args)
     {
         int t = Convert.ToInt32(Console.ReadLine());
@@ -192,4 +192,5 @@ class Ice_Cream_2
             whatFlavors(cost, money);
         }
     }
+*/
 }
