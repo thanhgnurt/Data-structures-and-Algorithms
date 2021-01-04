@@ -12,18 +12,18 @@ using System.Text.RegularExpressions;
 using System.Text;
 using System;
 
-class Friend_Circle_Queries
+public class Friend_Circle_Queries_NotPerfoment
 {
-
-    // Complete the maxCircle function below.
-    public static int[] maxCircle(int[][] queries)
+    ///<summary>
+    ///--Note class
+    ///</summary>
+    /// Complete the maxCircle function below.
+    public  int[] maxCircle(int[][] queries)
     {
         int n = queries.Length;
         int[] result = new int[n];
         Hashtable arrHash = new Hashtable();
-        Hashtable countHash = new Hashtable();
         List<List<int>> listCircles = new List<List<int>>();
-        List<int> count = new List<int>(); 
         for(int i=0; i< n; i++)
         {
             int person1 = queries[i][0];
@@ -33,20 +33,16 @@ class Friend_Circle_Queries
             {
                 if (isPersent[1] == -1)
                 {
-                    // List<int> newCircle = new List<int>() {person1, person2 };
-                    // listCircles.Add(newCircle);
-                    
-                    int number = arrHash.Count;
-                    arrHash.Add(person1, number);
-                    arrHash.Add(person2, number);
-                    countHash.Add(number, 2);
+                    List<int> newCircle = new List<int>() {person1, person2 };
+                    listCircles.Add(newCircle);
+                    arrHash.Add(person1, listCircles.Count - 1);
+                    arrHash.Add(person2, listCircles.Count - 1);
                 }
                 else
                 {
                     int index2 = isPersent[1];
-                 //   listCircles[index2].Add(person1);
+                    listCircles[index2].Add(person1);
                     arrHash.Add(person1, index2);
-                    countHash[index2] = Convert.ToInt32(countHash[index2]) + 1;
                 }
             }
             else
@@ -54,9 +50,8 @@ class Friend_Circle_Queries
                 if (isPersent[1] == -1)
                 {
                     int index1 = isPersent[0];
-                  //  listCircles[index1].Add(person2);
+                    listCircles[index1].Add(person2);
                     arrHash.Add(person2, index1);
-                    countHash[index1] = Convert.ToInt32(countHash[index1]) + 1;
                 }
                 else
                 {
@@ -68,36 +63,24 @@ class Friend_Circle_Queries
                         {
                             arrHash[listCircles[index2][j]] = index1;
                         }
-                        countHash[index2] = 0;
-                        countHash[index1] = Convert.ToInt32(countHash[index2]) + Convert.ToInt32(countHash[index1]);
-
-                        //  List<int> temp = listCircles[index2];
-                        // listCircles[index1].InsertRange(listCircles[index1].Count - 1, temp);
+                        List<int> temp = listCircles[index2];
+                        listCircles[index1].InsertRange(listCircles[index1].Count - 1, temp);
                         //listCircles.RemoveAt(index2);
                     }
                 }
             }
 
-            //  int max = listCircles[0].Count;
-            //  for(int j =0; j< listCircles.Count; j++)
-            // {
-            //     if(max< listCircles[j].Count)
-            //     {
-            //         max = listCircles[j].Count;
-            //    }
-            //  }
-            //  result[i] = max;
-
-            int max = 0;
-            foreach (DictionaryEntry de in arrHash)
+            int max = listCircles[0].Count;
+            for(int j =0; j< listCircles.Count; j++)
             {
-                int temp = Convert.ToInt32(de.Value);
-                if(max< temp)
+                if(max< listCircles[j].Count)
                 {
-                    max = temp;
+                    max = listCircles[j].Count;
                 }
             }
             result[i] = max;
+
+
 
         }
 

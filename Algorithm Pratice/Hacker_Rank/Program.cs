@@ -10,7 +10,8 @@ namespace Hacker_Rank
     {
         static void Main(string[] args)
         {
-
+            Friend_Circle_Queries_NotPerfoment friendCircle = new Friend_Circle_Queries_NotPerfoment();
+            
         }
     }
 }
