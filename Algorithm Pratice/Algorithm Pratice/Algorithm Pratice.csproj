@@ -48,6 +48,7 @@
     <Compile Include="Sort\Counting_Sort.cs" />
     <Compile Include="Sort\Insertion_Sort.cs" />
     <Compile Include="Sort\Quick_Sort.cs" />
+    <Compile Include="Stack\Deloyment Stack.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

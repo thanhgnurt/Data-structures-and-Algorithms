@@ -89,7 +89,7 @@ class Insert_Linked_List
         return head;
 
     }
-
+/*
     static void Main(string[] args)
     {
         TextWriter textWriter = new StreamWriter(@System.Environment.GetEnvironmentVariable("OUTPUT_PATH"), true);
@@ -115,4 +115,5 @@ class Insert_Linked_List
         textWriter.Flush();
         textWriter.Close();
     }
+*/
 }

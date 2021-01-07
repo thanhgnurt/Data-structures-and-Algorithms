@@ -12,3 +12,10 @@ D:\DHTX-VB2\CTDL&GT\Code_Data structures and Algorithms\Algorithm Pratice\Hacker
 D:\DHTX-VB2\CTDL&GT\Code_Data structures and Algorithms\Algorithm Pratice\Hacker_Rank\bin\Debug\Hacker_Rank.exe.config
 D:\DHTX-VB2\CTDL&GT\Code_Data structures and Algorithms\Algorithm Pratice\Hacker_Rank\bin\Debug\Hacker_Rank.exe
 D:\DHTX-VB2\CTDL&GT\Code_Data structures and Algorithms\Algorithm Pratice\Hacker_Rank\bin\Debug\Hacker_Rank.pdb
+D:\DHTX-VB2\Hoc Ky 2 - 2021\CTDL&GT\Code_Data structures and Algorithms\Algorithm Pratice\Hacker_Rank\obj\Debug\Hacker_Rank.csprojAssemblyReference.cache
+D:\DHTX-VB2\Hoc Ky 2 - 2021\CTDL&GT\Code_Data structures and Algorithms\Algorithm Pratice\Hacker_Rank\obj\Debug\Hacker_Rank.csproj.CoreCompileInputs.cache
+D:\DHTX-VB2\Hoc Ky 2 - 2021\CTDL&GT\Code_Data structures and Algorithms\Algorithm Pratice\Hacker_Rank\obj\Debug\Hacker_Rank.exe
+D:\DHTX-VB2\Hoc Ky 2 - 2021\CTDL&GT\Code_Data structures and Algorithms\Algorithm Pratice\Hacker_Rank\obj\Debug\Hacker_Rank.pdb
+D:\DHTX-VB2\Hoc Ky 2 - 2021\CTDL&GT\Code_Data structures and Algorithms\Algorithm Pratice\Hacker_Rank\bin\Debug\Hacker_Rank.exe.config
+D:\DHTX-VB2\Hoc Ky 2 - 2021\CTDL&GT\Code_Data structures and Algorithms\Algorithm Pratice\Hacker_Rank\bin\Debug\Hacker_Rank.exe
+D:\DHTX-VB2\Hoc Ky 2 - 2021\CTDL&GT\Code_Data structures and Algorithms\Algorithm Pratice\Hacker_Rank\bin\Debug\Hacker_Rank.pdb

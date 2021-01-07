@@ -88,6 +88,7 @@ class Friend_Circle_Queries_Disjoint_Set
 
         //---implement loop
     }
+    /*
     static void Main(string[] args)
     {
         TextWriter textWriter = new StreamWriter(@System.Environment.GetEnvironmentVariable("OUTPUT_PATH"), true);
@@ -108,4 +109,5 @@ class Friend_Circle_Queries_Disjoint_Set
         textWriter.Flush();
         textWriter.Close();
     }
+    */
 }

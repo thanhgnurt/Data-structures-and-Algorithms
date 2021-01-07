@@ -84,7 +84,7 @@ class Maximum_Xor
         }
         return result;
     }
-
+/*
     static void Main(string[] args)
     {
         TextWriter textWriter = new StreamWriter(@System.Environment.GetEnvironmentVariable("OUTPUT_PATH"), true);
@@ -110,4 +110,5 @@ class Maximum_Xor
         textWriter.Flush();
         textWriter.Close();
     }
+*/
 }

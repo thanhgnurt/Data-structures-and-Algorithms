@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Algorithm_Pratice.Stack;
 
 namespace Algorithm_Pratice
 {
@@ -11,7 +12,16 @@ namespace Algorithm_Pratice
         static void Main(string[] args)
         {
             int[] input = new int[10] { 5, 3, 2, 7, 6, 4, 5, 1, 9, 5 };
+            StackCus StackDemo = new StackCus(10);
+            StackDemo.Push("a");
+            StackDemo.Push("b");
+            StackDemo.Pop();
+            string peek = StackDemo.Peek();
+            bool isEmpty = StackDemo.IsEmpty();
+            Console.WriteLine(StackDemo.top);
+            Console.WriteLine(peek);
 
+            Console.ReadLine();
             //---check function CountingSort
             input = Counting_Sort.CountingSort(input);
             //--Check function QuickSort
@@ -23,7 +33,7 @@ namespace Algorithm_Pratice
             {
                 Console.WriteLine(input[i]);
             }
-            Console.ReadLine();
+            
 
         }
 

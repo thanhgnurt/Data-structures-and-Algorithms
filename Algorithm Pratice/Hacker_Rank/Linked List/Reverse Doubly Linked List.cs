@@ -95,14 +95,14 @@ class Reverse_Doubly_Linked_List
         {
             nex = current.next;
             current.prev = current.next;
-            current.next = pre;
+            current.next = current.prev;
             pre = current;
             current = nex;
         }
         return pre;
 
     }
-
+/*
     static void Main(string[] args)
     {
         TextWriter textWriter = new StreamWriter(@System.Environment.GetEnvironmentVariable("OUTPUT_PATH"), true);
@@ -130,4 +130,5 @@ class Reverse_Doubly_Linked_List
         textWriter.Flush();
         textWriter.Close();
     }
+*/
 }
