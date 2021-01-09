@@ -4,6 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Algorithm_Pratice.Stack;
+using Algorithm_Pratice.Queue;
+using Algorithm_Pratice.Linked_List;
+using Algorithm_Pratice.Sort;
 
 namespace Algorithm_Pratice
 {
@@ -11,28 +14,43 @@ namespace Algorithm_Pratice
     {
         static void Main(string[] args)
         {
-            int[] input = new int[10] { 5, 3, 2, 7, 6, 4, 5, 1, 9, 5 };
-            StackCus StackDemo = new StackCus(10);
-            StackDemo.Push("a");
-            StackDemo.Push("b");
-            StackDemo.Pop();
-            string peek = StackDemo.Peek();
-            bool isEmpty = StackDemo.IsEmpty();
-            Console.WriteLine(StackDemo.top);
-            Console.WriteLine(peek);
+            int[] input = new int[8] { 35, 33, 42, 10, 14, 19, 27, 44 };
+            // StackCus StackDemo = new StackCus(10);
+            //  StackDemo.Push("a");
+            // StackDemo.Push("b");
+            //StackDemo.Pop();
+            // string peek = StackDemo.Peek();
+            // bool isEmpty = StackDemo.IsEmpty();
+            // Console.WriteLine(StackDemo.top);
+            // Console.WriteLine(peek);
 
-            Console.ReadLine();
+
+            // Implement_Queue_Linked_List<int> queueLL = new Implement_Queue_Linked_List<int>();
+            // queueLL.Push(15);
+            //// queueLL.Push(25);
+            //queueLL.Push(30);
+            // queueLL.Push(55);
+
+            // Console.WriteLine("head1: {0}",queueLL.headQueue.next.data);
+            // Console.WriteLine("tail1: {0}", queueLL.Length);
+            //  Console.WriteLine("peek: {0}",queueLL.Peek().data);
+
+            //   Console.WriteLine("Pop: {0}",queueLL.Pop().data);
+            // Console.WriteLine("head2: {0}", queueLL.headQueue.data);
+            // Console.ReadLine();
             //---check function CountingSort
-            input = Counting_Sort.CountingSort(input);
+             input = Counting_Sort.CountingSort(input);
             //--Check function QuickSort
             // input = Quick_Sort.QuickSort(input);
-            //input = Insertion_Sort.InsertionSort(input);
-            int indexSearch = BinarySearch.BinarySearchRecursive(input, 0, 9, 4);
-            Console.WriteLine(indexSearch);
+            // input = Insertion_Sort.InsertionSort(input);
+            // input = Shell_Sort.ShellSort(input);
+           // int indexSearch = BinarySearch.BinarySearchRecursive(input, 0, 9, 4);
+           // Console.WriteLine(indexSearch);
             for (int i = 0; i< input.Length; i++)
             {
                 Console.WriteLine(input[i]);
             }
+            Console.ReadLine();
             
 
         }
