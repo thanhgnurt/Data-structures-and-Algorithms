@@ -46,6 +46,7 @@
     <Compile Include="Array\DS.cs" />
     <Compile Include="Array\Dynamic_Array.cs" />
     <Compile Include="Array\Left Rotation.cs" />
+    <Compile Include="demo.cs" />
     <Compile Include="Dictionaries and Hashmaps\Hash Tables_ Ransom Note.cs" />
     <Compile Include="Dictionaries and Hashmaps\Hash Table_Random Note _ Solution 2.cs" />
     <Compile Include="Dictionaries and Hashmaps\Two Strings.cs" />

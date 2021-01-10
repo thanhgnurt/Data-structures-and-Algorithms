@@ -11,13 +11,14 @@ namespace Hacker_Rank
     {
         static void Main(string[] args)
         {
-            Friend_Circle_Queries_NotPerfoment friendCircle = new Friend_Circle_Queries_NotPerfoment();
-            Stack stack = new Stack();
-            stack.Push("a");
-            stack.Push("b");
-            stack.Pop();
-            Console.WriteLine(stack.top);
-
+            //  Friend_Circle_Queries_NotPerfoment friendCircle = new Friend_Circle_Queries_NotPerfoment();
+            //  Stack stack = new Stack();
+            // stack.Push("a");
+            //  stack.Push("b");
+            // stack.Pop();
+            // Console.WriteLine(stack.top);
+           int result= demo.TinhTongN(6);
+            Console.WriteLine("result = {0}", result);
             Console.ReadLine();
         }
     }
