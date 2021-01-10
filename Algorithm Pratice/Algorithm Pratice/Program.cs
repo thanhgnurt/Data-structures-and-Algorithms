@@ -15,7 +15,7 @@ namespace Algorithm_Pratice
     {
         static void Main(string[] args)
         {
-            int[] input = new int[8] { 35, 33, 42, 10, 14, 19, 27, 44 };
+            int[] input = new int[8] { 5, 3, 10, 2, 4, 6, 7, 12 };
             // StackCus StackDemo = new StackCus(10);
             //  StackDemo.Push("a");
             // StackDemo.Push("b");
@@ -29,8 +29,11 @@ namespace Algorithm_Pratice
             {
                 treeDemo.InsertNodeIndex(input[i], i);
             }
-            int ind = treeDemo.Search(15);
-            Console.WriteLine("Position in Array : {0}", ind);
+
+            Console.WriteLine("text : {0}", treeDemo.NextSibling(3).data);
+            
+           // int ind = treeDemo.Search(15);
+           // Console.WriteLine("Position in Array : {0}", ind);
             Console.ReadLine();
 
 

@@ -62,7 +62,6 @@ namespace Algorithm_Pratice.Trees
                 {
                     left = new Node(element);
                     left.parent = this;
-                    left.nextSibling = right;
 
                 }
                 else
@@ -87,9 +86,42 @@ namespace Algorithm_Pratice.Trees
                 }
             }
         }
+        public void InsertNodeIndex(int element, int indexInArray)
+        {
+            if (element < data)
+            {
+                if (left == null)
+                {
+                    left = new Node(element, indexInArray);
+                    left.parent = this;
+                }
+                else
+                {
+                    left.InsertNodeIndex(element, indexInArray);
+                }
+            }
+            else
+            {
+                if (element == data) quatity++;
+                else
+                {
+                    if (right == null)
+                    {
+                        right = new Node(element, indexInArray);
+                        right.parent = this;
+
+                    }
+                    else
+                    {
+                        right.InsertNodeIndex(element, indexInArray);
+                    }
+                }
+            }
+        }
 
         public Node Parent(int x)
         {
+           
             if (x < data)
             {
                 if (left == null) return null;
@@ -102,7 +134,7 @@ namespace Algorithm_Pratice.Trees
             {
                 if (x == data)
                 {
-                    return this;
+                    return parent;
                 }
                 else
                 {
@@ -119,6 +151,10 @@ namespace Algorithm_Pratice.Trees
 
         public Node NextSibling(int x)
         {
+            if(x == left.data)
+            {
+                return right;
+            }
             if (x < data)
             {
                 if (left == null) return null;
@@ -129,47 +165,18 @@ namespace Algorithm_Pratice.Trees
             }
             else
             {
-                if (x == data)
-                {
-                    return this.right;
-                }
+                if (right == null) return null;
                 else
                 {
-                    if (right == null) return null;
-                    else
-                    {
-                        return right.NextSibling(x);
-
-                    }
+                    return right.NextSibling(x);
 
                 }
+
             }
         }
 
 
-        public void InsertNodeIndex(int element, int indexInArray)
-        {
-            if (element < data)
-            {
-                if (left == null) left = new Node(element, indexInArray);
-                else
-                {
-                    left.InsertNodeIndex(element, indexInArray);
-                }
-            }
-            else
-            {
-                if (element == data) quatity++;
-                else
-                {
-                    if (right == null) right = new Node(element, indexInArray);
-                    else
-                    {
-                        right.InsertNodeIndex(element, indexInArray);
-                    }
-                }
-            }
-        }
+
         public int Search(int element)
         {
             
@@ -227,6 +234,14 @@ namespace Algorithm_Pratice.Trees
         public int Search(int keySearch)
         {
            return root.Search(keySearch);
+        }
+        public Node Parent(int x)
+        {
+            return root.Parent(x);
+        }
+        public Node NextSibling(int x)
+        {
+            return root.NextSibling(x);
         }
 
     }
