@@ -12,7 +12,7 @@ namespace Algorithm_Pratice.Trees
         public Node left;
         public Node right;
         private Node parent;
-        private Node nextSibling;
+
         public int index;
         public int data;
         public int quatity;
@@ -28,7 +28,6 @@ namespace Algorithm_Pratice.Trees
             left = null;
             right = null;
             parent = null;
-            nextSibling = null;
         }
         public Node(int nodeData)
         {
@@ -38,7 +37,6 @@ namespace Algorithm_Pratice.Trees
             left = null;
             right = null;
             parent = null;
-            nextSibling = null;
         }
         public Node(int nodeData, int indexInArray)
         {
@@ -50,7 +48,6 @@ namespace Algorithm_Pratice.Trees
             left = null;
             right = null;
             parent = null;
-            nextSibling = null;
         }
 
         //--Method---

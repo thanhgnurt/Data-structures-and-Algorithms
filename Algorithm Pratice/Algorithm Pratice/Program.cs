@@ -8,6 +8,7 @@ using Algorithm_Pratice.Queue;
 using Algorithm_Pratice.Linked_List;
 using Algorithm_Pratice.Sort;
 using Algorithm_Pratice.Trees;
+using Algorithm_Pratice.Search;
 
 namespace Algorithm_Pratice
 {
@@ -16,6 +17,8 @@ namespace Algorithm_Pratice
         static void Main(string[] args)
         {
             int[] input = new int[8] { 5, 3, 10, 2, 4, 6, 7, 12 };
+            int[] input2 = new int[7] { 45, 22, 37, 28, 55, 16, 38};
+            Linear_Exhaustive.LinearExhaustive(input2, 28);
             // StackCus StackDemo = new StackCus(10);
             //  StackDemo.Push("a");
             // StackDemo.Push("b");
@@ -24,16 +27,16 @@ namespace Algorithm_Pratice
             // bool isEmpty = StackDemo.IsEmpty();
             // Console.WriteLine(StackDemo.top);
             // Console.WriteLine(peek);
-            BTSTree treeDemo = new BTSTree(input[0]);
-            for (int i =1; i< input.Length; i++)
-            {
-                treeDemo.InsertNodeIndex(input[i], i);
-            }
+            // BTSTree treeDemo = new BTSTree(input[0]);
+            // for (int i =1; i< input.Length; i++)
+            // {
+            //   treeDemo.InsertNodeIndex(input[i], i);
+            // }
 
-            Console.WriteLine("text : {0}", treeDemo.NextSibling(3).data);
-            
-           // int ind = treeDemo.Search(15);
-           // Console.WriteLine("Position in Array : {0}", ind);
+            // Console.WriteLine("text : {0}", treeDemo.NextSibling(4).data);
+
+            // int ind = treeDemo.Search(15);
+            // Console.WriteLine("Position in Array : {0}", ind);
             Console.ReadLine();
 
 
