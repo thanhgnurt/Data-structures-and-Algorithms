@@ -12,13 +12,14 @@ using System.Text.RegularExpressions;
 using System.Text;
 using System;
 
-class Insert_Linked_List
+class Insert_a_node_at_the_head_of_a_linked_list
 {
-    //khoi tao node moi
+
     class SinglyLinkedListNode
     {
         public int data;
         public SinglyLinkedListNode next;
+
         public SinglyLinkedListNode(int nodeData)
         {
             this.data = nodeData;
@@ -30,27 +31,13 @@ class Insert_Linked_List
     {
         public SinglyLinkedListNode head;
         public SinglyLinkedListNode tail;
+
         public SinglyLinkedList()
         {
             this.head = null;
             this.tail = null;
         }
 
-        public void InsertNode(int nodeData)
-        {
-            SinglyLinkedListNode node = new SinglyLinkedListNode(nodeData);
-
-            if (this.head == null)
-            {
-                this.head = node;
-            }
-            else
-            {
-                this.tail.next = node;
-            }
-
-            this.tail = node;
-        }
     }
 
     static void PrintSinglyLinkedList(SinglyLinkedListNode node, string sep, TextWriter textWriter)
@@ -58,6 +45,7 @@ class Insert_Linked_List
         while (node != null)
         {
             textWriter.Write(node.data);
+
             node = node.next;
 
             if (node != null)
@@ -67,7 +55,7 @@ class Insert_Linked_List
         }
     }
 
-    // Complete the insertNodeAtPosition function below.
+    // Complete the insertNodeAtHead function below.
 
     /*
      * For your reference:
@@ -78,15 +66,11 @@ class Insert_Linked_List
      * }
      *
      */
-    static SinglyLinkedListNode insertNodeAtPosition(SinglyLinkedListNode head, int data, int position)
+    static SinglyLinkedListNode insertNodeAtHead(SinglyLinkedListNode llist, int data)
     {
-        SinglyLinkedListNode p = head;
-        //-- di chuyen con tro den vi tri position p
-        for (int i = 0; i < position - 1; p = p.next, i++) ;
-        SinglyLinkedListNode ln = new SinglyLinkedListNode(data);
-        ln.next = p.next;
-        p.next = ln;
-        return head;
+        SinglyLinkedListNode node = new SinglyLinkedListNode(data);
+        node.next = llist;
+        return node;
 
     }
 /*
@@ -101,17 +85,15 @@ class Insert_Linked_List
         for (int i = 0; i < llistCount; i++)
         {
             int llistItem = Convert.ToInt32(Console.ReadLine());
-            llist.InsertNode(llistItem);
+            SinglyLinkedListNode llist_head = insertNodeAtHead(llist.head, llistItem);
+            llist.head = llist_head;
         }
 
-        int data = Convert.ToInt32(Console.ReadLine());
 
-        int position = Convert.ToInt32(Console.ReadLine());
 
-        SinglyLinkedListNode llist_head = insertNodeAtPosition(llist.head, data, position);
-
-        PrintSinglyLinkedList(llist_head, " ", textWriter);
+        PrintSinglyLinkedList(llist->head, "\n", textWriter);
         textWriter.WriteLine();
+
         textWriter.Flush();
         textWriter.Close();
     }

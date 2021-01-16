@@ -12,13 +12,14 @@ using System.Text.RegularExpressions;
 using System.Text;
 using System;
 
-class Insert_Linked_List
+class Cycle_Detection
 {
-    //khoi tao node moi
+
     class SinglyLinkedListNode
     {
         public int data;
         public SinglyLinkedListNode next;
+
         public SinglyLinkedListNode(int nodeData)
         {
             this.data = nodeData;
@@ -30,6 +31,7 @@ class Insert_Linked_List
     {
         public SinglyLinkedListNode head;
         public SinglyLinkedListNode tail;
+
         public SinglyLinkedList()
         {
             this.head = null;
@@ -58,6 +60,7 @@ class Insert_Linked_List
         while (node != null)
         {
             textWriter.Write(node.data);
+
             node = node.next;
 
             if (node != null)
@@ -67,7 +70,7 @@ class Insert_Linked_List
         }
     }
 
-    // Complete the insertNodeAtPosition function below.
+    // Complete the hasCycle function below.
 
     /*
      * For your reference:
@@ -78,42 +81,64 @@ class Insert_Linked_List
      * }
      *
      */
-    static SinglyLinkedListNode insertNodeAtPosition(SinglyLinkedListNode head, int data, int position)
+    static bool hasCycle(SinglyLinkedListNode head)
     {
-        SinglyLinkedListNode p = head;
-        //-- di chuyen con tro den vi tri position p
-        for (int i = 0; i < position - 1; p = p.next, i++) ;
-        SinglyLinkedListNode ln = new SinglyLinkedListNode(data);
-        ln.next = p.next;
-        p.next = ln;
-        return head;
-
+        Dictionary<SinglyLinkedListNode, int> hashList = new Dictionary<SinglyLinkedListNode, int>();
+        while(head!= null)
+        {
+            if (hashList.ContainsKey(head)) return true;
+            hashList.Add(head, head.data);
+            head = head.next;
+        }
+        return false;
     }
-/*
+
+    /*
     static void Main(string[] args)
     {
         TextWriter textWriter = new StreamWriter(@System.Environment.GetEnvironmentVariable("OUTPUT_PATH"), true);
 
-        SinglyLinkedList llist = new SinglyLinkedList();
+        int tests = Convert.ToInt32(Console.ReadLine());
 
-        int llistCount = Convert.ToInt32(Console.ReadLine());
-
-        for (int i = 0; i < llistCount; i++)
+        for (int testsItr = 0; testsItr < tests; testsItr++)
         {
-            int llistItem = Convert.ToInt32(Console.ReadLine());
-            llist.InsertNode(llistItem);
+            int index = Convert.ToInt32(Console.ReadLine());
+
+            SinglyLinkedList llist = new SinglyLinkedList();
+
+            int llistCount = Convert.ToInt32(Console.ReadLine());
+
+            for (int i = 0; i < llistCount; i++)
+            {
+                int llistItem = Convert.ToInt32(Console.ReadLine());
+                llist.InsertNode(llistItem);
+            }
+
+            SinglyLinkedListNode extra = new SinglyLinkedListNode(-1);
+            SinglyLinkedListNode temp = llist.head;
+
+            for (int i = 0; i < llistCount; i++)
+            {
+                if (i == index)
+                {
+                    extra = temp;
+                }
+
+                if (i != llistCount - 1)
+                {
+                    temp = temp.next;
+                }
+            }
+
+            temp.next = extra;
+
+            bool result = hasCycle(llist.head);
+
+            textWriter.WriteLine((result ? 1 : 0));
         }
 
-        int data = Convert.ToInt32(Console.ReadLine());
-
-        int position = Convert.ToInt32(Console.ReadLine());
-
-        SinglyLinkedListNode llist_head = insertNodeAtPosition(llist.head, data, position);
-
-        PrintSinglyLinkedList(llist_head, " ", textWriter);
-        textWriter.WriteLine();
         textWriter.Flush();
         textWriter.Close();
     }
-*/
+    */
 }

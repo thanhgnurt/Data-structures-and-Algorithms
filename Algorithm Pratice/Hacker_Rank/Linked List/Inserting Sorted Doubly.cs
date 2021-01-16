@@ -134,7 +134,7 @@ class Inserting_Sorted_Doubly
         pointer.next = nodeElement;
 
     }
-
+/*
     static void Main(string[] args)
     {
         TextWriter textWriter = new StreamWriter(@System.Environment.GetEnvironmentVariable("OUTPUT_PATH"), true);
@@ -164,4 +164,5 @@ class Inserting_Sorted_Doubly
         textWriter.Flush();
         textWriter.Close();
     }
+*/
 }

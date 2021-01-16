@@ -46,11 +46,15 @@
     <Compile Include="Array\DS.cs" />
     <Compile Include="Array\Dynamic_Array.cs" />
     <Compile Include="Array\Left Rotation.cs" />
+    <Compile Include="demo.cs" />
     <Compile Include="Dictionaries and Hashmaps\Hash Tables_ Ransom Note.cs" />
     <Compile Include="Dictionaries and Hashmaps\Hash Table_Random Note _ Solution 2.cs" />
     <Compile Include="Dictionaries and Hashmaps\Two Strings.cs" />
     <Compile Include="Array\Minimum Swaps 2.cs" />
+    <Compile Include="Linked List\Cycle Detection.cs" />
     <Compile Include="Linked List\Find Merge.cs" />
+    <Compile Include="Linked List\Insert a node at the head of a linked list.cs" />
+    <Compile Include="Linked List\Insert a Node at the Tail of a Linked List.cs" />
     <Compile Include="Linked List\Insert Linked List.cs" />
     <Compile Include="Linked List\Inserting Sorted Doubly.cs" />
     <Compile Include="Linked List\Print the Elements of a Linked List.cs" />
@@ -66,6 +70,11 @@
     <Compile Include="Search\Ice_Cream_2.cs" />
     <Compile Include="Sort\Bubble Sort.cs" />
     <Compile Include="Sort\Mark and Toys.cs" />
+    <Compile Include="Stacks and Queues\Balanced Brackets.cs" />
+    <Compile Include="Stacks and Queues\Stack.cs" />
+    <Compile Include="Trees\BST_ Lowest Common Ancestor.cs" />
+    <Compile Include="Trees\Trees_ Is This a Binary Search Tree.cs" />
+    <Compile Include="Trees\Tree_Height of a Binary Tree.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

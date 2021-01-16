@@ -101,7 +101,7 @@ class Find_Merge
         return 0;
 
     }
-
+/*
     static void Main(string[] args)
     {
         TextWriter textWriter = new StreamWriter(@System.Environment.GetEnvironmentVariable("OUTPUT_PATH"), true);
@@ -160,5 +160,7 @@ class Find_Merge
 
         textWriter.Flush();
         textWriter.Close();
-    }
+
 }
+*/
+    }
