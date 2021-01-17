@@ -18,7 +18,16 @@ namespace Algorithm_Pratice
         {
             int[] input = new int[8] { 5, 3, 10, 2, 4, 6, 7, 12 };
             int[] input2 = new int[7] { 45, 22, 37, 28, 55, 16, 38};
-            Linear_Exhaustive.LinearExhaustive(input2, 28);
+            int[] input3 = new int[6] { 1, 2, 6, 4 , 7, 3 };
+
+            CreateAVL AVL_Tree = new CreateAVL();
+            for(int i =0; i< input3.Length; i++)
+            {
+                AVL_Tree.InsertNode(input3[i]);
+            }
+            Console.WriteLine("Ket qua node: {0}", AVL_Tree.root.right.right.data);
+
+            //Linear_Exhaustive.LinearExhaustive(input2, 28);
             // StackCus StackDemo = new StackCus(10);
             //  StackDemo.Push("a");
             // StackDemo.Push("b");
