@@ -17,5 +17,47 @@ namespace Hacker_Rank.Sort
 {
     class Mark_and_Toys
     {
+        static int maximumToys(int[] prices, int k)
+        {
+            int[] sortted = ShellSort(prices, prices.Length);
+            int maxSpend = 0;
+            int maxToys = 0;
+
+            while (maxSpend <= k)
+            {
+                maxSpend += sortted[maxToys];
+                maxToys++;
+            }
+            return maxToys - 1;
+
+
+        }
+
+        static int[] ShellSort(int[] arr, int n)
+        {
+            int knuth = 1;
+            while (knuth < n)
+            {
+                knuth = knuth * 3 + 1;
+            }
+
+            for (int i = knuth; i > 0; i /= 3)
+            {
+                for (int j = i; j < n; j++)
+                {
+                    int temp = arr[j];
+                    int k = j;
+                    while (k >= i && arr[k - i] > temp)
+                    {
+                        arr[k] = arr[k - i];
+                        k -= i;
+                    }
+                    arr[k] = temp;
+                }
+            }
+            return arr;
+
+
+        }
     }
 }
